@@ -9,6 +9,13 @@ class AnimationWindow < Gosu::Window
 		@current = 0.0
 	end
 
+	def button_down id
+		case id
+		when Gosu::KbEscape
+			self.close
+		end
+	end	
+
 	def update
 		dt = 16.0
 		@current += dt
